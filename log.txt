@@ -1,0 +1,43 @@
+# Project Log: How2Code (QuickRef Clone)
+
+## Session: 2026-01-20
+- **Goal**: Clone `quickref.me` and `github.com/Fechin/reference`.
+- **UI/UX**: Focus on "stunning" visualization, clean typography, and smooth animations.
+- **Tech Stack**: Next.js, IDB (potentially for fast search if needed, or just memory), Fuse.js (search), Framer Motion (animations).
+
+### Log of Actions
+1.  Initialized `log.txt` to track progress.
+2.  Updated `README.md` to reflect the new project direction.
+3.  Cloning `Fechin/reference` repository to `data/reference` to serve as the content source.
+- **Infrastructure**: Installed Tailwind CSS to support the layout requirements.
+- **Components**: 
+  - SearchGrid: Implemented with Fuse.js for client-side search.
+  - Card: Added glassmorphism hover effects.
+  - [slug]: Created a custom markdown parser to convert Headings into Cards.
+- **Verification**: UI verified successfully on localhost:3000. Search and Detail pages are functional with premium styling.
+- **Troubleshooting**: Downgraded Tailwind CSS to v3.4 to resolve PostCSS plugin compatibility issues with Next.js.
+- **Redesign**: Executed complete UI/UX overhaul to 'Midnight Glass' aesthetic.
+  - Global: Added HSL variables for dark mode consistency.
+  - Home: Implemented futuristic centered search and ambient backgrounds.
+  - Cards: Added deterministic colors and tilt/hover effects.
+  - Detail: Improved Markdown rendering with code blocks and better tables.
+- **Fix**: Resolved Tailwind build error by correctly defining HSL color mappings in 	ailwind.config.ts and removing 'border-border' ambiguity.
+- **Feature**: Added interactive CodeBlock with Syntax Highlighting (Prism) and Copy-to-Clipboard functionality.
+- **Refactor**: Rewrote [slug]/page parser to support mixed content types (Code vs Text vs Table) and improved Masonry layout using CSS columns.
+- **Fix**: Resolved Syntax Highlighting issue by updating regex parser to handle spaces in language names (e.g., 'shell script').
+- **Improvement**: Refined CodeBlock UI with 'VS Code' style header and cleaner typography.
+- **Verification**: Syntax highlighting confirmed working for bash/shell scripts (green commands, orange strings).
+- **UI Polish**: CodeBlock headers now show the detected language and a clean Copy button.
+- **UX**: Masonry layout confirmed robust.
+- **Content**: Added new cheat sheets for 'Microsoft Excel', 'Microsoft Word', 'Linux Shortcuts', and 'Zig'.
+- **Feature**: Implemented CategoryFilter on homepage to sort tools by type (Language, Tool, OS, Software).
+- **Suggestions**: Recommended adding PDF Export and Table of Contents for future updates.
+- **Verification**: Browser check failed due to rate limiting (429), but code implementation for categories and new cheat sheets is complete.
+- **Next Steps**: Manually verify 'Software' and 'System' filters on localhost.
+- **Feature**: Implemented Global Command Palette (Ctrl+K) for instant navigation.
+- **Feature**: Added Sticky Table of Contents (TOC) with active state tracking.
+- **Feature**: Added 'Related Tools' section to the bottom of cheat sheets.
+- **Refactor**: Switched cheat sheet layout to vertical stack + sidebar to support TOC.
+- **Feature**: Added 'Quick Look' preview mode. Spacebar or Eye Icon now opens a modal with full cheat sheet content using QuickLookModal.
+- **Refactor**: Decoupled Markdown parsing and rendering logic into lib/markdown.ts and components/CheatSheetRenderers.tsx.
+- **Verification**: Quick Look modal functionality implemented and verified via code structure (browser verification skipped due to rate limit).
