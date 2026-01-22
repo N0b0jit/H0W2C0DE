@@ -11,10 +11,21 @@ interface SearchGridProps {
     posts: any[];
 }
 
+import QuickLookModal from "./QuickLookModal";
+
+interface SearchGridProps {
+    posts: any[];
+}
+
 export default function SearchGrid({ posts }: SearchGridProps) {
     const [query, setQuery] = useState("");
     const [category, setCategory] = useState("all");
     const [isFocused, setIsFocused] = useState(false);
+    const [previewSlug, setPreviewSlug] = useState<string | null>(null);
+
+    const handlePreview = (slug: string) => {
+        setPreviewSlug(slug);
+    };
 
     // Fuse configuration
     const fuse = useMemo(() => {
@@ -104,10 +115,18 @@ export default function SearchGrid({ posts }: SearchGridProps) {
                             slug={post.slug}
                             background={post.background}
                             index={index}
+                            onHover={() => { }} // Optional prefetch logic
+                            onLeave={() => { }}
+                            onPreview={handlePreview}
                         />
                     ))}
                 </AnimatePresence>
             </div>
+
+            <QuickLookModal
+                slug={previewSlug}
+                onClose={() => setPreviewSlug(null)}
+            />
 
             {results.length === 0 && (
                 <motion.div
