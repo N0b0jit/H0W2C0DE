@@ -1,11 +1,11 @@
 # How2Code - Quick Reference for Developers
 
-This project is a high-performance, visually stunning clone of [QuickRef.me](https://quickref.me), designed to provide developers with instant access to cheat sheets and reference materials.
+This project is a high-performance, visually stunning developer reference tool designed to provide developers with instant access to cheat sheets and reference materials.
 
 ## Features
 - **Instant Search**: Powered by Fuse.js for fuzzy searching through thousands of topics.
 - **Visual Excellence**: Premium UI/UX with smooth transitions (Framer Motion) and glassmorphism design.
-- **Content Rich**: Sourced directly from the open-source [Fechin/reference](https://github.com/Fechin/reference) repository.
+- **Content Rich**: Comprehensive reference materials for all major programming languages.
 - **Responsive**: Fully optimized for customized mobile and desktop experiences.
 
 ## Getting Started
@@ -24,4 +24,4 @@ This project is a high-performance, visually stunning clone of [QuickRef.me](htt
 - **Search**: Fuse.js
 
 ---
-*Maintained by the How2Code Team*
+*Created by N0b0jit*

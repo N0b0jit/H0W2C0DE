@@ -60,7 +60,7 @@ export default function Home() {
         <SearchGrid posts={serializedPosts} />
 
         <footer className="mt-32 border-t border-white/5 pt-8 pb-12 text-center text-sm text-gray-600">
-          <p>© 2026 How2Code. Data sourced from Fechin/reference.</p>
+          <p>© 2026 How2Code. Built by N0b0jit.</p>
         </footer>
       </main>
     </div>
